@@ -2,7 +2,7 @@
 #define FIELDWRAPPER2_H
 #include <tinyxml.h>
 #include <vector>
-
+#include <map>
 
 template<typename fieldType>
 class fieldWrapper
@@ -66,8 +66,46 @@ public:
 protected:
     fieldList& m_value;
 };
-
-
+//<root>
+//    <aMap key="k" value="v">
+//        <k v="3"/>
+//        <k v="4"/>
+//        <k v="5"/>
+//    </aMap>
+//</root>
+template <typename keyType, typename valueType>
+class fieldWrapper<std::map<keyType, valueType> >
+{
+public:
+    typedef std::map<keyType, valueType> fieldList;
+    fieldWrapper<fieldList>(fieldList& value):m_value(value) {}
+    void parse(const char* name, const TiXmlElement& root)
+    {
+        const TiXmlElement* pRoot = root.FirstChildElement(name);
+        if(!pRoot)
+        {//如果没有相应的节点
+            return;
+        }
+        keyType newKey;
+        valueType newValue;
+        const char* keyName = pRoot->Attribute("key");
+        const char* valueName = pRoot->Attribute("value");
+        if(!keyName || !valueName)
+        {//如果没有设置"key","value"属性，那么就不能找到节点
+            return;
+        }
+        for(const TiXmlElement* ele = pRoot->FirstChildElement(); ele; ele = ele->NextSiblingElement())
+        {
+            fieldWrapper<keyType> newKeyWrapper(newKey);
+            newKeyWrapper.parse(keyName, *ele);
+            fieldWrapper<valueType> newValueWrapper(newValue);
+            newValueWrapper.parse(valueName, *ele);
+            m_value[newKey] = newValue;
+        }
+    }
+protected:
+    fieldList& m_value;
+};
 
 
 

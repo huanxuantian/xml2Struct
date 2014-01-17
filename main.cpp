@@ -2,11 +2,13 @@
 #include <tinyxml.h>
 //#include ".\fieldWrapper.h"
 #include ".\fieldWrapper2.h"
+#include <map>
 using namespace std;
 struct aStruct
 {
     int a;
     std::vector<int> aVec;
+    std::map<int, int> aMap;
     void parse(const char* name, const TiXmlElement& root)
     {
 //        fieldWrapper fa(a);
@@ -15,6 +17,7 @@ struct aStruct
 //        faVec.parse("aVec", root);
         ::parse(a, "a", root);
         ::parse(aVec, "aVec", root);
+        ::parse(aMap, "aMap", root);
     }
 };
 int main()
@@ -37,6 +40,10 @@ int main()
     for(std::vector<int>::const_iterator it = a.aVec.begin(); it != a.aVec.end(); ++it)
     {
         cout << *it << endl;
+    }
+    for(std::map<int, int>::const_iterator it = a.aMap.begin(); it != a.aMap.end(); ++it)
+    {
+        cout << it->first << " " << it->second << endl;
     }
     return 0;
 }
