@@ -4,15 +4,23 @@
 	<item v="5"/>
 </aStruct> -->
 <!-- <item a="33"></item> -->
-<aStruct a="333">
-	<aVec key="v">
-		<item v="32"/>
-		<item v="14"/>
-		<item v="522"/>
-	</aVec>
-	<aMap key="k" value="v">
-		<item k="12" v="32"/>
-		<item k="22" v="14"/>
-		<item k="123" v="522"/>
-	</aMap>
-</aStruct>
+<config>
+    <aStruct a="333">
+        <aVec key="v">
+            <item v="32"/>
+            <item v="14"/>
+            <item v="512"/>
+        </aVec>
+        <aMap key="k" value="v">
+            <item k="12" v="32"/>
+            <item k="22" v="14"/>
+            <item k="123" v="52"/>
+        </aMap>
+        <anInnerMap key="kddd" value="vddd">
+            <item kddd="133">
+                <vddd a="54"/>
+            </item>
+        </anInnerMap>
+    </aStruct>
+</config>
+

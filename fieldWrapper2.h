@@ -12,7 +12,7 @@ public:
     //模板函数，注意，因为返回值的原因，这个函数不能被重载！
     void parse(const char* name, const TiXmlElement& root)
     {//默认我们调用m_value自己的parse，从而，m_value需要自己生成一个parse函数。
-        m_value.parse(name, root);
+        m_value.parse(name, *root.FirstChildElement(name));
     }
 protected:
     fieldType& m_value;
