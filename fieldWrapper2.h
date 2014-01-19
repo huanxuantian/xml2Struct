@@ -4,15 +4,22 @@
 #include <vector>
 #include <map>
 
+//对于struct，对应于一个新的xml节点。
+//<root>
+//    <aStruct prop1="34"></aStruct>
+//</root>
 template<typename fieldType>
 class fieldWrapper
 {
 public:
     fieldWrapper(fieldType& value):m_value(value) {}
-    //模板函数，注意，因为返回值的原因，这个函数不能被重载！
     void parse(const char* name, const TiXmlElement& root)
     {//默认我们调用m_value自己的parse，从而，m_value需要自己生成一个parse函数。
-        m_value.parse(name, *root.FirstChildElement(name));
+        const TiXmlElement* pRoot = root.FirstChildElement(name);
+        if(pRoot)
+        {//这里的name是该struct的名字，在parse的时候实际上是用不到的。
+            m_value.parse(/*name*/"", *pRoot);
+        }
     }
 protected:
     fieldType& m_value;
@@ -30,13 +37,11 @@ public:
 protected:
     int& m_value;
 };
-//<root>
-//    <aVec key="v">
-//        <item v="3"/>
-//        <item v="4"/>
-//        <item v="5"/>
-//    </aVec>
-//</root>
+//<aVec key="v">
+//    <item v="32"/>
+//    <item v="14"/>
+//    <item v="512"/>
+//</aVec>
 template <typename elementType>
 class fieldWrapper<std::vector<elementType> >
 {
@@ -66,13 +71,11 @@ public:
 protected:
     fieldList& m_value;
 };
-//<root>
-//    <aMap key="k" value="v">
-//        <k v="3"/>
-//        <k v="4"/>
-//        <k v="5"/>
-//    </aMap>
-//</root>
+//<aMap key="k" value="v">
+//    <item k="12" v="32"/>
+//    <item k="22" v="14"/>
+//    <item k="123" v="52"/>
+//</aMap>
 template <typename keyType, typename valueType>
 class fieldWrapper<std::map<keyType, valueType> >
 {
