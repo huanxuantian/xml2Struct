@@ -42,12 +42,9 @@ int main()
     //fieldWrapper<std::vector<int> > anInt(a);
 
     aStruct a;
-    fieldWrapper<aStruct> anInt(a);
+    const TiXmlElement* root = doc.RootElement();
+    ::parse(a, "aStruct", *root);
 
-
-    TiXmlElement* root = doc.RootElement();
-    anInt.parse("aStruct",*root);
-//    cout << anInt.get();
     cout << a.a << endl;
     for(std::vector<int>::const_iterator it = a.aVec.begin(); it != a.aVec.end(); ++it)
     {

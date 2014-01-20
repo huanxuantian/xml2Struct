@@ -46,8 +46,8 @@ template <typename elementType>
 class fieldWrapper<std::vector<elementType> >
 {
 public:
-    typedef std::vector<elementType> fieldList;
-    fieldWrapper<fieldList>(fieldList& value):m_value(value) {}
+    typedef std::vector<elementType> fieldVec;
+    fieldWrapper<fieldVec>(fieldVec& value):m_value(value) {}
     void parse(const char* name, const TiXmlElement& root)
     {
         const TiXmlElement* pRoot = root.FirstChildElement(name);
@@ -69,7 +69,7 @@ public:
         }
     }
 protected:
-    fieldList& m_value;
+    fieldVec& m_value;
 };
 //<aMap key="k" value="v">
 //    <item k="12" v="32"/>
@@ -80,8 +80,8 @@ template <typename keyType, typename valueType>
 class fieldWrapper<std::map<keyType, valueType> >
 {
 public:
-    typedef std::map<keyType, valueType> fieldList;
-    fieldWrapper<fieldList>(fieldList& value):m_value(value) {}
+    typedef std::map<keyType, valueType> fieldMap;
+    fieldWrapper<fieldMap>(fieldMap& value):m_value(value) {}
     void parse(const char* name, const TiXmlElement& root)
     {
         const TiXmlElement* pRoot = root.FirstChildElement(name);
@@ -107,7 +107,7 @@ public:
         }
     }
 protected:
-    fieldList& m_value;
+    fieldMap& m_value;
 };
 
 
