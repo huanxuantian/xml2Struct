@@ -7,6 +7,8 @@ using namespace std;
 struct aStruct
 {
     int a;
+    double b;
+    float c;
     std::vector<int> aVec;
     std::map<int, int> aMap;
     struct anInner{
@@ -23,6 +25,8 @@ struct aStruct
 //        fieldWrapper faVec(aVec);
 //        faVec.parse("aVec", root);
         ::parse(a, "a", root);
+        ::parse(b, "b", root);
+        ::parse(c, "c", root);
         ::parse(aVec, "aVec", root);
         ::parse(aMap, "aMap", root);
         ::parse(anInnerMap,"anInnerMap", root);
@@ -45,7 +49,8 @@ int main()
     const TiXmlElement* root = doc.RootElement();
     ::parse(a, "aStruct", *root);
 
-    cout << a.a << endl;
+    cout << a.a << " " << a.b << " " << a.c << " " << endl;
+
     for(std::vector<int>::const_iterator it = a.aVec.begin(); it != a.aVec.end(); ++it)
     {
         cout << *it << endl;

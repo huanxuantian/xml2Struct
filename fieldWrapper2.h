@@ -24,6 +24,10 @@ public:
 protected:
     fieldType& m_value;
 };
+//------------------------------------
+//原子数据的特化：原子数据，指的是可以放在一个attribute里面的数据。包括关键字数据和自定义原子数据
+//------------------------------------
+
 //<root name="333"></root>
 template <>
 class fieldWrapper<int>
@@ -37,6 +41,43 @@ public:
 protected:
     int& m_value;
 };
+
+//<root name="333.5"></root>
+template <>
+class fieldWrapper<double>
+{
+public:
+    typedef double elementType;
+    fieldWrapper<elementType>(elementType& value):m_value(value) {}
+    void parse(const char* name, const TiXmlElement& root)
+    {
+        root.Attribute(name, &m_value);
+    }
+protected:
+    elementType& m_value;
+};
+
+//<root name="333.5"></root>
+template <>
+class fieldWrapper<float>
+{
+public:
+    typedef float elementType;
+    fieldWrapper<elementType>(elementType& value):m_value(value) {}
+    void parse(const char* name, const TiXmlElement& root)
+    {
+        root.QueryFloatAttribute(name, &m_value);
+    }
+protected:
+    elementType& m_value;
+};
+//------------------------------------
+//原子数据的特化结束
+//------------------------------------
+
+//------------------------------------
+//集合数据的特化。目前支持vector和map
+//------------------------------------
 //<aVec key="v">
 //    <item v="32"/>
 //    <item v="14"/>
@@ -109,12 +150,16 @@ public:
 protected:
     fieldMap& m_value;
 };
+//------------------------------------
+//集合数据的特化结束
+//------------------------------------
 
 
 
 
-
-
+//------------------------------------
+//使用此函数来使得fieldWrapper可以自动匹配。
+//------------------------------------
 template <typename fieldType>
 void parse(fieldType& field, const char* name, const TiXmlElement& root)
 {

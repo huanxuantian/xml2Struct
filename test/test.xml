@@ -5,7 +5,7 @@
 </aStruct> -->
 <!-- <item a="33"></item> -->
 <config>
-    <aStruct a="333">
+    <aStruct a="333" b="32" c="32.5f">
         <aVec key="v">
             <item v="32"/>
             <item v="14"/>
