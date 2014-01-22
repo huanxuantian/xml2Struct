@@ -2,11 +2,13 @@
 #include <tinyxml.h>
 //#include ".\fieldWrapper.h"
 #include ".\fieldWrapper2.h"
+#include ".\AutoInit.h"
 #include <map>
 using namespace std;
 struct aStruct
 {
-    int a;
+    AutoInit<int> a;
+    //int a;
     double b;
     float c;
     std::vector<int> aVec;
@@ -24,6 +26,7 @@ struct aStruct
 //        fa.parse("a",root);
 //        fieldWrapper faVec(aVec);
 //        faVec.parse("aVec", root);
+        cout << a << endl;
         ::parse(a, "a", root);
         ::parse(b, "b", root);
         ::parse(c, "c", root);

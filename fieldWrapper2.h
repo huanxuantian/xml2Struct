@@ -3,7 +3,7 @@
 #include <tinyxml.h>
 #include <vector>
 #include <map>
-
+#include ".\AutoInit.h"
 //对于struct，对应于一个新的xml节点。
 //<root>
 //    <aStruct prop1="34"></aStruct>
@@ -164,6 +164,13 @@ template <typename fieldType>
 void parse(fieldType& field, const char* name, const TiXmlElement& root)
 {
     fieldWrapper<fieldType> wrapper(field);
+    wrapper.parse(name,root);
+}
+
+template <typename fieldType>
+void parse(AutoInit<fieldType>& field, const char* name, const TiXmlElement& root)
+{
+    fieldWrapper<fieldType> wrapper(field.operator fieldType&());
     wrapper.parse(name,root);
 }
 #endif // FIELDWRAPPER2_H
