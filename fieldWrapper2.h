@@ -3,6 +3,7 @@
 #include <tinyxml.h>
 #include <vector>
 #include <map>
+#include <string>
 #include ".\AutoInit.h"
 //对于struct，对应于一个新的xml节点。
 //<root>
@@ -71,6 +72,26 @@ public:
 protected:
     elementType& m_value;
 };
+
+//<root name="Xinggang Li"></root>
+template <>
+class fieldWrapper<std::string>
+{
+public:
+    typedef std::string elementType;
+    fieldWrapper<elementType>(elementType& value):m_value(value) {}
+    void parse(const char* name, const TiXmlElement& root)
+    {
+        const char* value = root.Attribute(name);
+        if(value)
+        {
+            m_value = value;
+        }
+    }
+protected:
+    elementType& m_value;
+};
+
 //------------------------------------
 //原子数据的特化结束
 //------------------------------------

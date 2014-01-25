@@ -13,10 +13,13 @@ struct aStruct
     float c;
     std::vector<int> aVec;
     std::map<int, int> aMap;
+
     struct anInner{
         int a;
+        std::string aString;
         void parse(const char* name, const TiXmlElement& root){
             ::parse(a,"a",root);
+            ::parse(aString,"aString", root);
         }
     };
     std::map<int, anInner> anInnerMap;
@@ -62,7 +65,7 @@ int main()
     {
         cout << it->first << " " << it->second << endl;
     }
-    cout << a.anInnerMap[133].a << endl;
+    cout << a.anInnerMap[133].a << " " << a.anInnerMap[133].aString << endl;
     return 0;
 }
 

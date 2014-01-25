@@ -18,7 +18,7 @@
         </aMap>
         <anInnerMap key="kddd" value="vddd">
             <item kddd="133">
-                <vddd a="54"/>
+                <vddd a="54" aString="Xinggang Li"/>
             </item>
         </anInnerMap>
     </aStruct>
