@@ -5,6 +5,11 @@
 #include <map>
 #include <string>
 #include ".\AutoInit.h"
+//前向声明，这样，就可以在fieldWrapper调用它了
+//但是它本身也会调用fieldWrapper的，间接递归调用。
+template <typename fieldType>
+void parse(fieldType& field, const char* name, const TiXmlElement& root);
+
 //对于struct，对应于一个新的xml节点。
 //<root>
 //    <aStruct prop1="34"></aStruct>
@@ -125,8 +130,7 @@ public:
         }
         for(const TiXmlElement* ele = pRoot->FirstChildElement(); ele; ele = ele->NextSiblingElement())
         {
-            fieldWrapper<elementType> newElementWrapper(newElement);
-            newElementWrapper.parse(keyName, *ele);
+            ::parse(newElement, keyName, *ele);
             m_value.push_back(newElement);
         }
     }
@@ -161,10 +165,8 @@ public:
         }
         for(const TiXmlElement* ele = pRoot->FirstChildElement(); ele; ele = ele->NextSiblingElement())
         {
-            fieldWrapper<keyType> newKeyWrapper(newKey);
-            newKeyWrapper.parse(keyName, *ele);
-            fieldWrapper<valueType> newValueWrapper(newValue);
-            newValueWrapper.parse(valueName, *ele);
+            ::parse(newKey, keyName, *ele);
+            ::parse(newValue, valueName, *ele);
             m_value[newKey] = newValue;
         }
     }

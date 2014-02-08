@@ -25,10 +25,6 @@ struct aStruct
     std::map<int, anInner> anInnerMap;
     void parse(const char* name, const TiXmlElement& root)
     {
-//        fieldWrapper fa(a);
-//        fa.parse("a",root);
-//        fieldWrapper faVec(aVec);
-//        faVec.parse("aVec", root);
         cout << a << endl;
         ::parse(a, "a", root);
         ::parse(b, "b", root);
