@@ -1,0 +1,19 @@
+# CMake generation dependency list for this directory.
+F:/Users/HP/Documents/GitHub/xml2Struct/CMakeLists.txt
+F:/Users/HP/Documents/GitHub/xml2Struct/build/CMakeFiles/2.8.12.1/CMakeSystem.cmake
+F:/Users/HP/Documents/GitHub/xml2Struct/build/CMakeFiles/2.8.12.1/CMakeCCompiler.cmake
+F:/Users/HP/Documents/GitHub/xml2Struct/build/CMakeFiles/2.8.12.1/CMakeCXXCompiler.cmake
+E:/ProgramData/CMake 2.8/share/cmake-2.8/Modules/CMakeSystemSpecificInformation.cmake
+E:/ProgramData/CMake 2.8/share/cmake-2.8/Modules/CMakeGenericSystem.cmake
+E:/ProgramData/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows.cmake
+E:/ProgramData/CMake 2.8/share/cmake-2.8/Modules/Platform/WindowsPaths.cmake
+E:/ProgramData/CMake 2.8/share/cmake-2.8/Modules/CMakeCInformation.cmake
+E:/ProgramData/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows-MSVC-C.cmake
+E:/ProgramData/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows-MSVC.cmake
+F:/Users/HP/Documents/GitHub/xml2Struct/build/CMakeFiles/2.8.12.1/CMakeRCCompiler.cmake
+E:/ProgramData/CMake 2.8/share/cmake-2.8/Modules/CMakeRCInformation.cmake
+E:/ProgramData/CMake 2.8/share/cmake-2.8/Modules/CMakeCommonLanguageInclude.cmake
+E:/ProgramData/CMake 2.8/share/cmake-2.8/Modules/CMakeCXXInformation.cmake
+E:/ProgramData/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows-MSVC-CXX.cmake
+E:/ProgramData/CMake 2.8/share/cmake-2.8/Modules/Platform/Windows-MSVC.cmake
+E:/ProgramData/CMake 2.8/share/cmake-2.8/Modules/CMakeCommonLanguageInclude.cmake

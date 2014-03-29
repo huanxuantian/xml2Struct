@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{36DB9E7C-502D-495A-8B6C-ED07C6A484D4}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>xml2Struct</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">F:\Users\HP\Documents\GitHub\xml2Struct\build\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">xml2Struct.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">xml2Struct</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">F:\Users\HP\Documents\GitHub\xml2Struct\build\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">xml2Struct.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">xml2Struct</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">F:\Users\HP\Documents\GitHub\xml2Struct\build\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">xml2Struct.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">xml2Struct</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">F:\Users\HP\Documents\GitHub\xml2Struct\build\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">xml2Struct.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">xml2Struct</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:/Users/HP/Documents/GitHub/xml2Struct/./tinyxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:/Users/HP/Documents/GitHub/xml2Struct/./tinyxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:/Users/HP/Documents/GitHub/xml2Struct/./tinyxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>F:/Users/HP/Documents/GitHub/xml2Struct/build/Debug/xml2Struct.lib</ImportLibrary>
+      <ProgramDataBaseFile>F:/Users/HP/Documents/GitHub/xml2Struct/build/Debug/xml2Struct.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:/Users/HP/Documents/GitHub/xml2Struct/./tinyxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:/Users/HP/Documents/GitHub/xml2Struct/./tinyxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:/Users/HP/Documents/GitHub/xml2Struct/./tinyxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>F:/Users/HP/Documents/GitHub/xml2Struct/build/Release/xml2Struct.lib</ImportLibrary>
+      <ProgramDataBaseFile>F:/Users/HP/Documents/GitHub/xml2Struct/build/Release/xml2Struct.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:/Users/HP/Documents/GitHub/xml2Struct/./tinyxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:/Users/HP/Documents/GitHub/xml2Struct/./tinyxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:/Users/HP/Documents/GitHub/xml2Struct/./tinyxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>F:/Users/HP/Documents/GitHub/xml2Struct/build/MinSizeRel/xml2Struct.lib</ImportLibrary>
+      <ProgramDataBaseFile>F:/Users/HP/Documents/GitHub/xml2Struct/build/MinSizeRel/xml2Struct.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:/Users/HP/Documents/GitHub/xml2Struct/./tinyxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:/Users/HP/Documents/GitHub/xml2Struct/./tinyxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:/Users/HP/Documents/GitHub/xml2Struct/./tinyxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>F:/Users/HP/Documents/GitHub/xml2Struct/build/RelWithDebInfo/xml2Struct.lib</ImportLibrary>
+      <ProgramDataBaseFile>F:/Users/HP/Documents/GitHub/xml2Struct/build/RelWithDebInfo/xml2Struct.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule F:/Users/HP/Documents/GitHub/xml2Struct/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"E:\ProgramData\CMake 2.8\bin\cmake.exe" -HF:/Users/HP/Documents/GitHub/xml2Struct -BF:/Users/HP/Documents/GitHub/xml2Struct/build --check-stamp-file F:\Users\HP\Documents\GitHub\xml2Struct\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">F:/Users/HP/Documents/GitHub/xml2Struct/CMakeLists.txt;F:\Users\HP\Documents\GitHub\xml2Struct\CMakeLists.txt;F:\Users\HP\Documents\GitHub\xml2Struct\build\CMakeFiles\2.8.12.1\CMakeSystem.cmake;F:\Users\HP\Documents\GitHub\xml2Struct\build\CMakeFiles\2.8.12.1\CMakeCCompiler.cmake;F:\Users\HP\Documents\GitHub\xml2Struct\build\CMakeFiles\2.8.12.1\CMakeCXXCompiler.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;F:\Users\HP\Documents\GitHub\xml2Struct\build\CMakeFiles\2.8.12.1\CMakeRCCompiler.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;F:\Users\HP\Documents\GitHub\xml2Struct\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">F:\Users\HP\Documents\GitHub\xml2Struct\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule F:/Users/HP/Documents/GitHub/xml2Struct/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"E:\ProgramData\CMake 2.8\bin\cmake.exe" -HF:/Users/HP/Documents/GitHub/xml2Struct -BF:/Users/HP/Documents/GitHub/xml2Struct/build --check-stamp-file F:\Users\HP\Documents\GitHub\xml2Struct\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">F:/Users/HP/Documents/GitHub/xml2Struct/CMakeLists.txt;F:\Users\HP\Documents\GitHub\xml2Struct\CMakeLists.txt;F:\Users\HP\Documents\GitHub\xml2Struct\build\CMakeFiles\2.8.12.1\CMakeSystem.cmake;F:\Users\HP\Documents\GitHub\xml2Struct\build\CMakeFiles\2.8.12.1\CMakeCCompiler.cmake;F:\Users\HP\Documents\GitHub\xml2Struct\build\CMakeFiles\2.8.12.1\CMakeCXXCompiler.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;F:\Users\HP\Documents\GitHub\xml2Struct\build\CMakeFiles\2.8.12.1\CMakeRCCompiler.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;F:\Users\HP\Documents\GitHub\xml2Struct\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">F:\Users\HP\Documents\GitHub\xml2Struct\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule F:/Users/HP/Documents/GitHub/xml2Struct/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"E:\ProgramData\CMake 2.8\bin\cmake.exe" -HF:/Users/HP/Documents/GitHub/xml2Struct -BF:/Users/HP/Documents/GitHub/xml2Struct/build --check-stamp-file F:\Users\HP\Documents\GitHub\xml2Struct\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">F:/Users/HP/Documents/GitHub/xml2Struct/CMakeLists.txt;F:\Users\HP\Documents\GitHub\xml2Struct\CMakeLists.txt;F:\Users\HP\Documents\GitHub\xml2Struct\build\CMakeFiles\2.8.12.1\CMakeSystem.cmake;F:\Users\HP\Documents\GitHub\xml2Struct\build\CMakeFiles\2.8.12.1\CMakeCCompiler.cmake;F:\Users\HP\Documents\GitHub\xml2Struct\build\CMakeFiles\2.8.12.1\CMakeCXXCompiler.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;F:\Users\HP\Documents\GitHub\xml2Struct\build\CMakeFiles\2.8.12.1\CMakeRCCompiler.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;F:\Users\HP\Documents\GitHub\xml2Struct\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">F:\Users\HP\Documents\GitHub\xml2Struct\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule F:/Users/HP/Documents/GitHub/xml2Struct/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"E:\ProgramData\CMake 2.8\bin\cmake.exe" -HF:/Users/HP/Documents/GitHub/xml2Struct -BF:/Users/HP/Documents/GitHub/xml2Struct/build --check-stamp-file F:\Users\HP\Documents\GitHub\xml2Struct\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">F:/Users/HP/Documents/GitHub/xml2Struct/CMakeLists.txt;F:\Users\HP\Documents\GitHub\xml2Struct\CMakeLists.txt;F:\Users\HP\Documents\GitHub\xml2Struct\build\CMakeFiles\2.8.12.1\CMakeSystem.cmake;F:\Users\HP\Documents\GitHub\xml2Struct\build\CMakeFiles\2.8.12.1\CMakeCCompiler.cmake;F:\Users\HP\Documents\GitHub\xml2Struct\build\CMakeFiles\2.8.12.1\CMakeCXXCompiler.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;F:\Users\HP\Documents\GitHub\xml2Struct\build\CMakeFiles\2.8.12.1\CMakeRCCompiler.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;E:\ProgramData\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;F:\Users\HP\Documents\GitHub\xml2Struct\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">F:\Users\HP\Documents\GitHub\xml2Struct\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\main.cpp"  />
+    <ClCompile Include="..\tinyXmlHelper.cpp"  />
+    <ClCompile Include="..\tinyxml\tinystr.cpp"  />
+    <ClCompile Include="..\tinyxml\tinyxml.cpp"  />
+    <ClCompile Include="..\tinyxml\tinyxmlerror.cpp"  />
+    <ClCompile Include="..\tinyxml\tinyxmlparser.cpp"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="F:/Users/HP/Documents/GitHub/xml2Struct/build/ZERO_CHECK.vcxproj">
+      <Project>227CF20C-AFD0-4278-84BD-14C6E6C07F8D</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,3 @@
+F:/Users/HP/Documents/GitHub/xml2Struct/build/CMakeFiles/ALL_BUILD.dir
+F:/Users/HP/Documents/GitHub/xml2Struct/build/CMakeFiles/ZERO_CHECK.dir
+F:/Users/HP/Documents/GitHub/xml2Struct/build/CMakeFiles/xml2Struct.dir
