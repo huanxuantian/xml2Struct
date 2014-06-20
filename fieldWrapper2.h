@@ -173,6 +173,43 @@ public:
 protected:
     fieldMap& m_value;
 };
+//定长数组的特化.我们的游戏中大量使用.虽然以前在巨人的时候没有用过
+  //<a key="v" num="3">
+  //  <item v="2" />
+  //  <item v="3" />
+  //  <item v="4" />
+  //</a>
+template <typename elementType, int elementNum>
+class fieldWrapper<elementType[elementNum] >
+{
+public:
+   // typedef elementType[elementNum] fieldVec;
+    fieldWrapper<elementType[elementNum]>(elementType* value)
+		:m_value(value) {}
+    void parse(const char* name, const TiXmlElement& root)
+    {
+        const TiXmlElement* pRoot = root.FirstChildElement(name);
+        if(!pRoot)
+        {//如果没有相应的节点
+            return;
+        }
+        elementType newElement;
+        const char* keyName = pRoot->Attribute("key");
+        if(!keyName)
+        {//如果没有设置"key"属性，那么就不能找到节点
+            return;
+        }
+		int idx = 0;
+        for(const TiXmlElement* ele = pRoot->FirstChildElement(); ele && idx < elementNum; ele = ele->NextSiblingElement())
+        {
+            ::parse(newElement, keyName, *ele);
+            m_value[idx] = newElement;
+			idx++;
+        }
+    }
+protected:
+    elementType* m_value;
+};
 //------------------------------------
 //集合数据的特化结束
 //------------------------------------
@@ -196,4 +233,5 @@ void parse(AutoInit<fieldType>& field, const char* name, const TiXmlElement& roo
     fieldWrapper<fieldType> wrapper(field.operator fieldType&());
     wrapper.parse(name,root);
 }
+
 #endif // FIELDWRAPPER2_H

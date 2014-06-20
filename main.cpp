@@ -7,8 +7,8 @@
 using namespace std;
 struct aStruct
 {
-    AutoInit<int> a;
-    //int a;
+    //AutoInit<int> a;
+    int a[3];
     double b;
     float c;
     std::vector<int> aVec;
@@ -17,23 +17,39 @@ struct aStruct
     struct anInner{
         int a;
         std::string aString;
-        void parse(const char* name, const TiXmlElement& root){
-            ::parse(a,"a",root);
-            ::parse(aString,"aString", root);
-        }
-    };
-    std::map<int, anInner> anInnerMap;
-    void parse(const char* name, const TiXmlElement& root)
-    {
-        cout << a << endl;
-        ::parse(a, "a", root);
-        ::parse(b, "b", root);
-        ::parse(c, "c", root);
-        ::parse(aVec, "aVec", root);
-        ::parse(aMap, "aMap", root);
-        ::parse(anInnerMap,"anInnerMap", root);
-    }
+//        void parse(const char* name, const TiXmlElement& root){
+//            ::parse(a,"a",root);
+//            ::parse(aString,"aString", root);
+//        }
+        void parse(const char* name, const TiXmlElement& root);
 };
+    std::map<int, anInner> anInnerMap;
+//    void parse(const char* name, const TiXmlElement& root)
+//    {
+//        cout << a << endl;
+//        ::parse(a, "a", root);
+//        ::parse(b, "b", root);
+//        ::parse(c, "c", root);
+//        ::parse(aVec, "aVec", root);
+//        ::parse(aMap, "aMap", root);
+//        ::parse(anInnerMap,"anInnerMap", root);
+//    }
+    void parse(const char* name, const TiXmlElement& root);
+};
+
+void aStruct::anInner::parse(const char* name, const TiXmlElement& root){
+	::parse(a, "a",root);
+	::parse(aString, "aString",root);
+}
+void aStruct::parse(const char* name, const TiXmlElement& root){
+	::parse(a, "a",root);
+	::parse(b, "b",root);
+	::parse(c, "c",root);
+	::parse(aVec, "aVec",root);
+	::parse(aMap, "aMap",root);
+	::parse(anInnerMap, "anInnerMap",root);
+}
+
 int main()
 {
     TiXmlDocument doc;
@@ -51,7 +67,12 @@ int main()
     const TiXmlElement* root = doc.RootElement();
     ::parse(a, "aStruct", *root);
 
-    cout << a.a << " " << a.b << " " << a.c << " " << endl;
+    cout /*<< a.a*/ << " " << a.b << " " << a.c << " " << endl;
+	for(int i = 0; i < 3;i++)
+	{
+		cout << a.a[i] << " ";
+	}
+	cout<<endl;
 
     for(std::vector<int>::const_iterator it = a.aVec.begin(); it != a.aVec.end(); ++it)
     {

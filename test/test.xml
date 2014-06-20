@@ -6,6 +6,11 @@
 <!-- <item a="33"></item> -->
 <config>
     <aStruct a="333" b="32" c="32.5f">
+      <a key="v" num="3">
+        <item v="2" />
+        <item v="3" />
+        <item v="4" />
+      </a>
         <aVec key="v">
             <item v="32"/>
             <item v="14"/>
